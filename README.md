@@ -1,3 +1,59 @@
+# 🤖 Agente_IA
+
+Um projeto em **Java** que implementa um agente inteligente utilizando o algoritmo de busca heurística **A\*** para explorar um ambiente representado por uma grade (grid).  
+O agente é capaz de navegar pelo mapa, evitando obstáculos e encontrando o caminho mais eficiente até o objetivo.
+
+---
+
+## 📂 Estrutura do Projeto
+
+| Arquivo            | Descrição |
+|--------------------|-----------|
+| `Main.java`        | Ponto de entrada da aplicação. Inicializa o ambiente e executa o agente. |
+| `Ambiente.java`    | Representa o mundo do agente, organizado em uma grade de células. |
+| `Celula.java`      | Estrutura que representa cada posição do grid, podendo conter custo, tipo, etc. |
+| `Posicao.java`     | Classe para coordenadas (linha e coluna) no grid. |
+| `TipoCelula.java`  | Enum que define o tipo de cada célula (livre, obstáculo, início, objetivo, etc.). |
+| `Agente.java`      | Representa o agente e sua lógica de movimentação e decisão. |
+| `BuscaAEstrela.java` | Implementa o algoritmo A\*, responsável por calcular o caminho mais curto. |
+
+---
+
+## 🚀 Funcionalidades
+
+- 🗺️ **Configuração do ambiente** — Define mapa, obstáculos, ponto inicial e objetivo.
+- 🔍 **Busca A\*** — Calcula o melhor caminho com base em custo e heurística.
+- ⛔ **Detecção de obstáculos** — Evita células bloqueadas.
+- 📊 **Caminho otimizado** — Menor custo possível até o destino.
+
+---
+
+## 🛠️ Como Executar
+
+1. **Clonar o repositório**
+    ```bash
+    git clone https://github.com/MQUARTZO/Agente_IA.git
+    cd Agente_IA
+    ```
+
+2. **Compilar o projeto**
+    ```bash
+    javac Main.java Agente.java Ambiente.java BuscaAEstrela.java Celula.java Posicao.java TipoCelula.java
+    ```
+
+3. **Executar**
+    ```bash
+    java Main
+    ```
+
+4. *(Opcional)* Edite o código em `Main.java` para testar diferentes mapas e posições.
+
+---
+
+## 🎯 Exemplo de Uso
+
+Mapa com obstáculos:
+
 - `S` = Início  
 - `G` = Objetivo  
 - `#` = Obstáculo  
